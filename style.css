@@ -88,6 +88,9 @@ h1,h2,h3{font-family:"Sora",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;l
 .sec-head h2{font-size:26px;color:var(--evergreen)}
 .sec-head p{margin:0;color:#6B5C67;font-size:15px}
 
+.sec-head--stacked{flex-direction:column;align-items:flex-start;gap:6px}
+.sec-head--stacked p{font-size:16px}
+
 /* ---- Category grid ---- */
 #directory{margin-top:52px}
 main{padding-bottom:120px}
@@ -138,4 +141,49 @@ main{padding-bottom:120px}
 
 @media(max-width:560px){
   .suggest-cta{padding:36px 22px}
+}
+
+/* ---- Sub-pages (foster closet) ---- */
+.back-link{
+  display:inline-block;margin-top:32px;font-size:14px;font-weight:600;
+  color:var(--moss);text-decoration:none
+}
+.back-link:hover{color:var(--evergreen)}
+.page-hero{padding:20px 0 8px}
+.page-hero h1{font-size:clamp(28px,4.5vw,40px);max-width:18ch}
+.page-hero p.lead{font-size:17px;max-width:56ch;margin:14px 0 0;color:#5A4C57}
+
+.closet-links{display:flex;gap:20px;flex-wrap:wrap;margin:36px 0 80px}
+.closet-link-card{
+  flex:1 1 260px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+  transition:transform .16s ease
+}
+@media (prefers-reduced-motion:no-preference){
+  .closet-link-card:hover{transform:translateY(-3px)}
+}
+.closet-link-card h3{font-size:19px;color:var(--evergreen);margin-bottom:8px}
+.closet-link-card p{margin:0;font-size:14.5px;color:#6B5C67}
+
+.form-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:32px;box-shadow:var(--shadow);max-width:640px;margin:32px 0 100px
+}
+.form-card--centered{margin-left:auto;margin-right:auto}
+.field{margin-bottom:20px;display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:600;font-size:14.5px;color:var(--ink)}
+.field .hint{font-size:13px;font-weight:400;color:#6B5C67}
+.field input,.field select,.field textarea{
+  font:400 16px "Public Sans",sans-serif;padding:10px 12px;
+  border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)
+}
+.field textarea{resize:vertical;min-height:90px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:2px solid var(--moss);outline-offset:1px
+}
+.form-card .suggest-btn{display:block;margin-left:auto;margin-top:28px}
+.form-note{margin-top:16px;font-size:13.5px;color:#6B5C67;text-align:right}
+
+@media(max-width:560px){
+  .form-card{padding:22px}
 }

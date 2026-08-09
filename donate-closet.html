@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Donate to the Foster Closet | Monroe County Foster Parents</title>
+<meta name="description" content="Donate gently used kids' clothing to the Monroe County foster closet." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+  <a class="back-link" href="index.html#foster-closet">&larr; Back to Foster Closet</a>
+
+  <section class="page-hero">
+    <h1>Donate clothes</h1>
+    <p class="lead">Thank you for thinking of local foster families. Tell us what you have and we'll follow up to arrange drop-off or pickup.</p>
+  </section>
+
+  <form class="form-card form-card--centered" id="donate-form">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+    </div>
+
+    <div class="field">
+      <label for="contact">Email or phone</label>
+      <input id="contact" name="contact" type="text" required>
+    </div>
+
+    <div class="field">
+      <label for="items">What you're donating</label>
+      <span class="hint">e.g. "boys 4T&ndash;6, coats, boots"</span>
+      <textarea id="items" name="items" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="condition">Approximate quantity &amp; condition</label>
+      <input id="condition" name="condition" type="text" placeholder="e.g. 2 bags, gently used">
+    </div>
+
+    <div class="field">
+      <label for="logistics">Drop-off or pickup?</label>
+      <select id="logistics" name="logistics">
+        <option value="Drop-off">I can drop off</option>
+        <option value="Pickup">I need pickup</option>
+        <option value="Either">Either works</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+    </div>
+
+    <button type="submit" class="suggest-btn">Send donation details</button>
+    <p class="form-note">This opens your email app with the details filled in so you can send it to us.</p>
+  </form>
+</main>
+
+<script>
+document.getElementById('donate-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var val = function (id) { return document.getElementById(id).value.trim(); };
+  var subject = 'Foster Closet Donation';
+  var body = [
+    'Name: ' + val('name'),
+    'Email/phone: ' + val('contact'),
+    'Donating: ' + val('items'),
+    'Quantity/condition: ' + val('condition'),
+    'Drop-off or pickup: ' + document.getElementById('logistics').value,
+    'Notes: ' + val('notes')
+  ].join('\n');
+  window.location.href = 'mailto:contact@monroecountyfosterparents.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(body);
+});
+</script>
+
+</body>
+</html>

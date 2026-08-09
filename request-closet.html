@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Request from the Foster Closet | Monroe County Foster Parents</title>
+<meta name="description" content="Request kids' clothing from the Monroe County foster closet." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+  <a class="back-link" href="index.html#foster-closet">&larr; Back to Foster Closet</a>
+
+  <section class="page-hero">
+    <h1>Request clothes</h1>
+    <p class="lead">Let us know what a child in your care needs. We'll do our best to match you with donated clothing and follow up with next steps.</p>
+  </section>
+
+  <form class="form-card form-card--centered" id="request-form">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+    </div>
+
+    <div class="field">
+      <label for="contact">Email or phone</label>
+      <input id="contact" name="contact" type="text" required>
+    </div>
+
+    <div class="field">
+      <label for="ages-sizes">Ages &amp; sizes needed</label>
+      <span class="hint">e.g. "girl, 7 years old, size 8"</span>
+      <textarea id="ages-sizes" name="ages-sizes" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="items">Items needed</label>
+      <span class="hint">e.g. coats, shoes, pajamas</span>
+      <textarea id="items" name="items" required></textarea>
+    </div>
+
+    <div class="field">
+      <label for="urgency">How soon?</label>
+      <select id="urgency" name="urgency">
+        <option value="ASAP">ASAP</option>
+        <option value="Within a week">Within a week</option>
+        <option value="Within a month">Within a month</option>
+        <option value="No rush">No rush</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+    </div>
+
+    <button type="submit" class="suggest-btn">Send request</button>
+    <p class="form-note">This opens your email app with the details filled in so you can send it to us.</p>
+  </form>
+</main>
+
+<script>
+document.getElementById('request-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var val = function (id) { return document.getElementById(id).value.trim(); };
+  var subject = 'Foster Closet Request';
+  var body = [
+    'Name: ' + val('name'),
+    'Email/phone: ' + val('contact'),
+    'Ages/sizes needed: ' + val('ages-sizes'),
+    'Items needed: ' + val('items'),
+    'How soon: ' + document.getElementById('urgency').value,
+    'Notes: ' + val('notes')
+  ].join('\n');
+  window.location.href = 'mailto:contact@monroecountyfosterparents.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body=' + encodeURIComponent(body);
+});
+</script>
+
+</body>
+</html>
