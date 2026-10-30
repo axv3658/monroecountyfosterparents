@@ -224,7 +224,8 @@ body{background:white;color:black}
  .neighborhood .cat-heading{margin-bottom:24px}
  .neighborhood #foster-closet{padding:26px 24px;margin-top:24px}
  .neighborhood .closet-links{grid-template-columns:1fr;gap:12px}
- .neighborhood #contacts{padding:26px 24px;margin-top:32px}
+ .neighborhood #contacts{padding:26px 24px;}
+ .neighborhood #contacts>.sec-content{padding-block:32px;}
  .neighborhood .u-grid{grid-template-columns:1fr;gap:24px}
  .neighborhood .suggest-cta{padding:56px 8px}
 }
