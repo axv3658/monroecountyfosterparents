@@ -14,36 +14,36 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Donate to the Foster Closet | Monroe County Foster Parents" />
 <meta name="twitter:description" content="Donate gently used kids' clothing to the Monroe County foster closet." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="index.html"><svg class="village-mark" viewBox="0 0 64 52" aria-hidden="true" focusable="false" fill="none"><path d="M3 27 15 17l12 10v21H3Z" fill="currentColor" opacity=".16"/><path d="M37 27 49 17l12 10v21H37Z" fill="currentColor" opacity=".16"/><path d="m2 27 13-11 13 11M4 26v22h21V26m11 1 13-11 13 11M39 26v22h21V26" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 19 32 6l12 13v29H20Z" fill="var(--paper)"/><path d="m18 20 14-15 14 15M21 18v30h22V18M28 48V35h8v13" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M29 22h6v6h-6zM10 32h6v6h-6zM48 32h6v6h-6z" fill="currentColor"/></svg><span class="brand-type"><span class="brand-place">Monroe County, NY</span><span class="brand-name">Foster Parents</span></span></a><nav aria-label="Main navigation"><a href="index.html#directory">Resources</a><a href="index.html#foster-closet">Foster Closet</a><a href="index.html#contacts">Useful contacts</a></nav></header>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
   <a class="back-link" href="index.html#foster-closet">&larr; Back to Foster Closet</a>
 
   <section class="page-hero">
-    <h1>Donate clothes</h1>
+    <h1 id="form-title">Donate clothes</h1>
     <p class="lead">Thank you for thinking of local foster families. Tell us what you have and we'll follow up to arrange drop-off or pickup.</p>
   </section>
 
-  <form class="form-card form-card--centered" id="donate-form">
+  <form class="form-card form-card--centered" id="donate-form" aria-labelledby="form-title" aria-describedby="required-note">
+    <p id="required-note" class="form-note">Fields marked “required” must be filled in. Other fields are optional.</p>
     <div class="field">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required>
+      <label for="name">Name <span class="hint">(required)</span></label>
+      <input id="name" name="name" autocomplete="name" type="text" required>
     </div>
 
     <div class="field">
-      <label for="contact">Email or phone</label>
-      <input id="contact" name="contact" type="text" required>
+      <label for="contact">Email or phone <span class="hint">(required)</span></label>
+      <input id="contact" name="contact" autocapitalize="none" spellcheck="false" type="text" required>
     </div>
 
     <div class="field">
-      <label for="items">What you're donating</label>
-      <span class="hint">e.g. "boys 4T&ndash;6, coats, boots"</span>
-      <textarea id="items" name="items" required></textarea>
+      <label for="items">What you're donating <span class="hint">(required)</span></label>
+      <span class="hint" id="items-hint">e.g. "boys 4T&ndash;6, coats, boots"</span>
+      <textarea id="items" aria-describedby="items-hint" name="items" required></textarea>
     </div>
 
     <div class="field">
@@ -65,8 +65,9 @@
       <textarea id="notes" name="notes"></textarea>
     </div>
 
-    <button type="submit" class="suggest-btn">Send donation details</button>
-    <p class="form-note">This opens your email app with the details filled in so you can send it to us.</p>
+    <button type="submit" class="suggest-btn" aria-describedby="email-note">Send donation details</button>
+    <p id="email-note" class="form-note">This opens your email app with the details filled in so you can send it to us.</p>
+    <noscript><p>This form needs JavaScript to prepare an email. You can instead email your details to <a href="mailto:contact@monroecountyfosterparents.com">contact@monroecountyfosterparents.com</a>.</p></noscript>
   </form>
 </main>
 
