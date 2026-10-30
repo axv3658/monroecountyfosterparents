@@ -1,96 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Request from the Foster Closet | Monroe County Foster Parents</title>
-<meta name="description" content="Request kids' clothing from the Monroe County foster closet." />
-<link rel="canonical" href="https://monroecountyfosterparents.com/request-closet.html" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Monroe County Foster Parents" />
-<meta property="og:title" content="Request from the Foster Closet | Monroe County Foster Parents" />
-<meta property="og:description" content="Request kids' clothing from the Monroe County foster closet." />
-<meta property="og:url" content="https://monroecountyfosterparents.com/request-closet.html" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Request from the Foster Closet | Monroe County Foster Parents" />
-<meta name="twitter:description" content="Request kids' clothing from the Monroe County foster closet." />
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page moved | Monroe County Foster Parents</title>
+<link rel="canonical" href="https://monroecountyfosterparents.com/request-closet/">
+<meta http-equiv="refresh" content="0; url=request-closet/">
+<script>if (location.protocol === 'file:') location.replace('request-closet/index.html' + location.search + location.hash); else location.replace('request-closet/' + location.search + location.hash);</script>
 </head>
-<body class="neighborhood closet-page">
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header wrap"><a class="brand" href="index.html"><svg class="village-mark" viewBox="0 0 64 52" aria-hidden="true" focusable="false" fill="none"><path d="M3 27 15 17l12 10v21H3Z" fill="currentColor" opacity=".16"/><path d="M37 27 49 17l12 10v21H37Z" fill="currentColor" opacity=".16"/><path d="m2 27 13-11 13 11M4 26v22h21V26m11 1 13-11 13 11M39 26v22h21V26" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 19 32 6l12 13v29H20Z" fill="var(--paper)"/><path d="m18 20 14-15 14 15M21 18v30h22V18M28 48V35h8v13" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M29 22h6v6h-6zM10 32h6v6h-6zM48 32h6v6h-6z" fill="currentColor"/></svg><span class="brand-type"><span class="brand-place">Monroe County, NY</span><span class="brand-name">Foster Parents</span></span></a><nav aria-label="Main navigation"><a href="index.html#directory">Resources</a><a href="index.html#foster-closet">Foster Closet</a><a href="index.html#contacts">Useful contacts</a></nav></header>
-
-<main class="wrap" id="main" tabindex="-1">
-  <a class="back-link" href="index.html#foster-closet">&larr; Back to Foster Closet</a>
-
-  <section class="page-hero" aria-labelledby="form-title">
-    <h1 id="form-title">Request clothes</h1>
-    <p class="lead">Let us know what a child in your care needs. We'll do our best to match you with donated clothing and follow up with next steps.</p>
-  </section>
-
-  <form class="form-card form-card--centered" id="request-form" aria-labelledby="form-title" aria-describedby="required-note">
-    <p id="required-note" class="form-note">Fields marked “required” must be filled in. Other fields are optional.</p>
-    <div class="field">
-      <label for="name">Name <span class="hint">(required)</span></label>
-      <input id="name" name="name" autocomplete="name" type="text" required>
-    </div>
-
-    <div class="field">
-      <label for="contact">Email or phone <span class="hint">(required)</span></label>
-      <input id="contact" name="contact" autocapitalize="none" spellcheck="false" type="text" required>
-    </div>
-
-    <div class="field">
-      <label for="ages-sizes">Ages &amp; sizes needed <span class="hint">(required)</span></label>
-      <span class="hint" id="ages-sizes-hint">e.g. "girl, 7 years old, size 8"</span>
-      <textarea id="ages-sizes" aria-describedby="ages-sizes-hint" name="ages-sizes" required></textarea>
-    </div>
-
-    <div class="field">
-      <label for="items">Items needed <span class="hint">(required)</span></label>
-      <span class="hint" id="items-hint">e.g. coats, shoes, pajamas</span>
-      <textarea id="items" aria-describedby="items-hint" name="items" required></textarea>
-    </div>
-
-    <div class="field">
-      <label for="urgency">How soon?</label>
-      <select id="urgency" name="urgency">
-        <option value="ASAP">ASAP</option>
-        <option value="Within a week">Within a week</option>
-        <option value="Within a month">Within a month</option>
-        <option value="No rush">No rush</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
-    </div>
-
-    <button type="submit" class="suggest-btn" aria-describedby="email-note">Send request</button>
-    <p id="email-note" class="form-note">This opens your email app with the details filled in so you can send it to us.</p>
-    <noscript><p>This form needs JavaScript to prepare an email. You can instead email your details to <a href="mailto:contact@monroecountyfosterparents.com">contact@monroecountyfosterparents.com</a>.</p></noscript>
-  </form>
-</main>
-
-<script>
-document.getElementById('request-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var val = function (id) { return document.getElementById(id).value.trim(); };
-  var subject = 'Foster Closet Request';
-  var body = [
-    'Name: ' + val('name'),
-    'Email/phone: ' + val('contact'),
-    'Ages/sizes needed: ' + val('ages-sizes'),
-    'Items needed: ' + val('items'),
-    'How soon: ' + document.getElementById('urgency').value,
-    'Notes: ' + val('notes')
-  ].join('\n');
-  window.location.href = 'mailto:contact@monroecountyfosterparents.com'
-    + '?subject=' + encodeURIComponent(subject)
-    + '&body=' + encodeURIComponent(body);
-});
-</script>
-
-</body>
+<body><p>This page has moved. <a href="request-closet/index.html">Continue to the form</a>.</p></body>
 </html>
