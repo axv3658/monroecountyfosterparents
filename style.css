@@ -241,3 +241,32 @@ input,textarea,select{border-color:#707c70}
 input::placeholder,textarea::placeholder{color:#60685f;opacity:1}
 @media(max-width:560px){.brand-name{overflow-wrap:anywhere}.site-header nav{flex-wrap:wrap}.form-note a{overflow-wrap:anywhere}}
 @media(forced-colors:active){.cat,#foster-closet,#contacts,.closet-link-card{border:1px solid CanvasText}.suggest-btn{border:2px solid ButtonText}.tag{border:1px solid CanvasText}}
+
+/* Closet forms share the directory's paper, sage and yellow palette. */
+.closet-page main.wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:56px;align-items:start;padding-bottom:64px}
+.closet-page .back-link{grid-column:1/-1;justify-self:start;margin:8px 0 32px;padding:6px 0;color:var(--ink)}
+.closet-page .back-link:hover{color:var(--accent)}
+.closet-page .page-hero{padding:22px 0 0}
+.closet-page .page-hero h1{font-size:clamp(32px,4.2vw,48px);letter-spacing:-.045em;margin-bottom:20px}
+.closet-page .lead{font-size:17px;line-height:1.65;max-width:34ch}
+.closet-page .form-card{width:100%;max-width:none;margin:0;padding:32px;background:var(--notice-sage)}
+.closet-page .form-card>.form-note:first-child{margin:0 0 26px}
+.closet-page .field{gap:8px;margin-bottom:24px}
+.closet-page .field label{font-size:15px;font-weight:650}
+.closet-page .field label .hint{font-weight:400}
+.closet-page input,.closet-page textarea,.closet-page select{background:var(--surface);border:1px solid #707c70;border-radius:0;min-height:48px;padding:12px;color:var(--ink)}
+.closet-page textarea{min-height:112px}
+.closet-page input::placeholder,.closet-page textarea::placeholder{color:var(--muted)}
+.closet-page .form-note{line-height:1.6}
+.closet-page .suggest-btn{min-height:48px}
+@media(max-width:800px){
+ .closet-page main.wrap{grid-template-columns:1fr;gap:0;max-width:640px}
+ .closet-page .back-link{margin:4px 0 20px}
+ .closet-page .page-hero{padding:0 0 24px}
+ .closet-page .lead{max-width:55ch;margin-bottom:0}
+}
+@media(max-width:560px){
+ .closet-page .form-card{padding:24px 20px}
+ .closet-page main.wrap{padding-bottom:40px}
+}
+@media print{.closet-page .form-card{background:white}}
