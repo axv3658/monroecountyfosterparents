@@ -254,7 +254,11 @@
 
 @media(max-width:800px) {
   .neighborhood {
-    --section-gutter: 24px;
+    --section-gutter: 48px;
+  }
+
+  .neighborhood .suggest-cta {
+    padding: 72px 24px;
   }
 
   .neighborhood #foster-closet,
@@ -297,7 +301,7 @@
 
 @media(max-width:560px) {
   .neighborhood {
-    --section-gutter: 16px;
+    --section-gutter: 40px;
   }
 
   .neighborhood #foster-closet,
@@ -354,7 +358,7 @@
   }
 
   .neighborhood .suggest-cta {
-    padding: 56px 0;
+    padding: 56px 24px;
   }
 
 }
