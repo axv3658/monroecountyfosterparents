@@ -1,0 +1,77 @@
+/* Resource directory categories, links, descriptions, and tags. */
+
+#directory {
+  padding-top: 0;
+}
+
+#directory > .sec-head {
+  padding: 20px 0 40px;
+  margin-bottom: 0;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.cat {
+  display: grid;
+  grid-template-columns: 200px minmax(0,1fr);
+  gap: 40px;
+}
+
+.cat h2 {
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  color: var(--accent);
+  letter-spacing: -.025em;
+}
+
+.cat-heading p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 25ch;
+  margin: 0;
+}
+
+.cat ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cat li {
+  margin: 0 0 20px;
+}
+
+.cat li:last-child {
+  margin: 0;
+}
+
+.link {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.desc {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.tag {
+  font-size: 10px;
+  background: var(--soft);
+  padding: 3px 6px;
+  margin-left: 5px;
+}

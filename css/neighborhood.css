@@ -1,0 +1,372 @@
+/* Neighborhood palette and themed components, including responsive and print styles. */
+
+/* Neighborhood board: color groups information; resource names stay with descriptions. */
+.neighborhood {
+  --section-gutter: 40px;
+  --paper: #f6f2e9;
+  --ink: #283c36;
+  --muted: #38483e;
+  --accent: #124332;
+  --notice-yellow: #f2d36d;
+  --notice-peach: #efa987;
+  --notice-blue: #a9cedc;
+  --notice-sage: #b8cf95;
+  --surface: #fcf9f1;
+  --surface-hover: #fffdf7;
+  --yellow-hover: #e8c150;
+  background: var(--paper);
+}
+
+.neighborhood .wrap {
+  width: min(1100px,calc(100% - 80px));
+}
+
+.neighborhood .site-header {
+  padding: 30px 0 28px;
+}
+
+.neighborhood .site-header nav a:hover {
+  color: var(--accent);
+}
+
+.neighborhood .brand-name {
+  letter-spacing: -.045em;
+}
+
+.neighborhood .site-header nav {
+  font-size: 14px;
+  gap: 24px;
+}
+
+.neighborhood #directory>.sec-head {
+  padding: 28px 0 36px;
+}
+
+.neighborhood #directory .sec-head h1 {
+  max-width: 24ch;
+  font-size: clamp(32px,4.2vw,48px);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.neighborhood #directory .directory-intro {
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+.neighborhood .grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.neighborhood .cat {
+  display: block;
+  padding: 30px 32px 34px;
+  background: var(--notice-yellow);
+}
+
+.neighborhood .cat:nth-child(2) {
+  background: var(--notice-peach);
+}
+
+.neighborhood .cat:nth-child(3) {
+  background: var(--notice-blue);
+}
+
+.neighborhood .cat:nth-child(4) {
+  background: var(--notice-sage);
+}
+
+.neighborhood .cat h2 {
+  font-size: 27px;
+  color: var(--ink);
+  letter-spacing: -.035em;
+  margin-bottom: 8px;
+}
+
+.neighborhood .cat-heading {
+  margin-bottom: 28px;
+}
+
+.neighborhood .cat-heading p {
+  font-size: 14px;
+  max-width: 38ch;
+  line-height: 1.5;
+}
+
+.neighborhood .cat li {
+  margin-bottom: 21px;
+}
+
+.neighborhood .link {
+  font-size: 16px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb,currentColor 35%,transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.neighborhood .link:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+}
+
+.neighborhood .desc {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-top: 5px;
+  max-width: 48ch;
+}
+
+.neighborhood .tag {
+  display: inline-block;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 650;
+  padding: 1px 6px;
+  vertical-align: middle;
+}
+
+.neighborhood #foster-closet {
+  padding: 76px 0;
+  margin: 64px 0 0;
+  width: 100%;
+}
+
+/* Full-width backgrounds share one inner gutter, without nested padding. */
+.neighborhood #foster-closet > .closet-panel,
+.neighborhood #contacts > .sec-content {
+  width: min(1050px, calc(100% - 2 * var(--section-gutter)));
+  margin: auto;
+}
+
+.neighborhood #foster-closet::before {
+  content: none;
+}
+
+.neighborhood #foster-closet h2 {
+  font-size: 29px;
+  letter-spacing: -.035em;
+}
+
+.neighborhood #foster-closet .sec-head>p {
+  font-size: 15px;
+  max-width: 33ch;
+  margin-top: 14px;
+}
+
+.neighborhood .closet-links {
+  gap: 14px;
+}
+
+.neighborhood .closet-link-card {
+  padding: 22px;
+  background: var(--surface);
+  align-self: stretch;
+}
+
+.neighborhood .closet-link-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.neighborhood .closet-link-card p {
+  font-size: 14px;
+}
+
+.neighborhood .closet-link-card:hover {
+  background: var(--surface-hover);
+}
+
+.neighborhood #contacts {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 76px 0;
+  background: var(--notice-blue);
+}
+
+.neighborhood #contacts .sec-head {
+  margin-bottom: 28px;
+}
+
+.neighborhood #contacts h2 {
+  font-size: 28px;
+  color: var(--ink);
+}
+
+.neighborhood .u-grid {
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 30px;
+}
+
+.neighborhood .u-name {
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.neighborhood .u-num {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 6px 0;
+}
+
+.neighborhood a.u-num {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.neighborhood .u-sub {
+  font-size: 13px;
+}
+
+.neighborhood .suggest-cta {
+  padding: 72px 0;
+}
+
+.neighborhood .suggest-cta h2 {
+  font-size: 24px;
+}
+
+.neighborhood .suggest-cta p {
+  font-size: 15px;
+}
+
+.neighborhood .suggest-btn {
+  border: 0;
+  border-radius: 0;
+  padding: 14px 22px;
+  font-size: 15px;
+  background: var(--notice-yellow);
+  color: var(--ink);
+}
+
+.neighborhood .suggest-btn:hover {
+  background: var(--yellow-hover);
+  color: var(--ink);
+}
+
+@media(max-width:800px) {
+  .neighborhood {
+    --section-gutter: 24px;
+  }
+
+  .neighborhood #foster-closet,
+  .neighborhood #contacts {
+    padding: 40px 0;
+  }
+
+  .neighborhood .wrap {
+    width: calc(100% - 48px);
+  }
+
+  .neighborhood .site-header {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .neighborhood .cat {
+    padding: 24px;
+  }
+
+  .neighborhood .cat h2 {
+    font-size: 24px;
+  }
+
+  .neighborhood #foster-closet {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .neighborhood #foster-closet .sec-head>p {
+    max-width: 55ch;
+  }
+
+  .neighborhood .u-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+}
+
+@media(max-width:560px) {
+  .neighborhood {
+    --section-gutter: 16px;
+  }
+
+  .neighborhood #foster-closet,
+  .neighborhood #contacts {
+    padding: 32px 0;
+  }
+
+  .neighborhood .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .neighborhood .site-header {
+    padding: 24px 0 16px;
+  }
+
+  .neighborhood .site-header nav {
+    gap: 10px 20px;
+    font-size: 13px;
+  }
+
+  .neighborhood #directory>.sec-head {
+    padding: 20px 0 28px;
+  }
+
+  .neighborhood #directory .directory-intro {
+    font-size: 16px;
+  }
+
+  .neighborhood .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .neighborhood .cat {
+    padding: 26px 24px;
+  }
+
+  .neighborhood .cat-heading {
+    margin-bottom: 24px;
+  }
+
+  .neighborhood #foster-closet {
+    margin-top: 24px;
+  }
+
+  .neighborhood .closet-links {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .neighborhood .u-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .neighborhood .suggest-cta {
+    padding: 56px 0;
+  }
+
+}
+
+@media print {
+  .neighborhood .wrap {
+    width: 100%;
+  }
+
+  .neighborhood .cat,.neighborhood #foster-closet,.neighborhood #contacts {
+    background: white;
+    break-inside: avoid;
+  }
+
+}

@@ -1,0 +1,87 @@
+/* Closet photo layout and shared rounded card surfaces. */
+
+/* Keep the closet photograph beside, rather than inside, the green notice. */
+.neighborhood #foster-closet {
+  gap: 24px;
+  background: transparent;
+  align-items: stretch;
+  background: var(--notice-yellow);
+}
+
+.neighborhood #foster-closet .sec-content>.closet-panel>.sec-head {
+  padding-bottom: 24px;
+}
+
+.neighborhood #foster-closet .sec-head>p {
+  max-width: 55ch;
+}
+
+.closet-photo {
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  align-self: stretch;
+  overflow: hidden;
+  min-height: 240px;
+}
+
+.closet-photo img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 35% center;
+}
+
+.neighborhood #foster-closet .closet-links {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+.neighborhood #foster-closet .closet-link-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media(max-width:900px) {
+  .neighborhood #foster-closet {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  .closet-photo {
+    min-height: 0;
+    aspect-ratio: 5/2;
+  }
+
+  .closet-photo img {
+    object-fit: cover;
+  }
+
+}
+
+@media(max-width:640px) {
+  .neighborhood #foster-closet .closet-links {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  .closet-photo {
+    aspect-ratio: 5/3;
+  }
+
+}
+
+@media(max-width:360px) {
+  .neighborhood #foster-closet .closet-link-card {
+    padding: 18px;
+  }
+
+}
+
+/* Shared soft corners for the bulletin-board cards. */
+.neighborhood .cat,
+.neighborhood .closet-link-card,
+.neighborhood .form-card {
+  border-radius: 12px;
+}
+

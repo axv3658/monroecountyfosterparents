@@ -1,0 +1,158 @@
+/* Article pages, page headings, and shared form controls. */
+
+.back-link {
+  display: inline-block;
+  margin: 32px 0 0;
+  font-size: 13px;
+}
+
+.page-hero {
+  padding: 50px 0 28px;
+}
+
+.page-hero h1 {
+  max-width: 20ch;
+  margin-bottom: 24px;
+}
+
+.page-hero .acronym-title {
+  margin-bottom: 0;
+}
+
+.neighborhood .acronym-footer {
+  background: var(--notice-peach);
+  color: var(--ink);
+}
+
+.neighborhood .acronym-footer .suggest-cta p {
+  color: inherit;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 18px;
+}
+
+.form-card {
+  max-width: 640px;
+  margin: 0 0 70px;
+  padding-top: 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hint,.form-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+input,textarea,select {
+  width: 100%;
+  padding: 12px;
+  background: #fffefb;
+  color: var(--ink);
+  border: 1px solid #9ba593;
+  border-radius: 5px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-note {
+  margin-top: 18px;
+}
+
+.article-list {
+  margin: 18px 0 50px;
+}
+
+.editorial-note {
+  background: var(--soft);
+  padding: 24px 28px;
+  margin: 30px 0 60px;
+}
+
+.editorial-note h2 {
+  font-size: 22px;
+}
+
+.editorial-note p:last-child {
+  margin: 0;
+}
+
+.article-shell {
+  max-width: 740px;
+  margin: auto;
+}
+
+.article-shell h1 {
+  font-size: clamp(30px,4vw,44px);
+}
+
+.prose {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.prose h2 {
+  font-size: 23px;
+  margin: 48px 0 16px;
+}
+
+.prose ul {
+  padding-left: 24px;
+}
+
+.prose li {
+  margin-bottom: 12px;
+}
+
+.prose a {
+  overflow-wrap: anywhere;
+}
+
+.acronym-list {
+  margin: 0 0 36px;
+}
+
+.acronym-list > div {
+  display: grid;
+  grid-template-columns: 8ch minmax(0, 1fr);
+  gap: 32px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--muted);
+  break-inside: avoid;
+}
+
+.acronym-list > div:last-child {
+  border-bottom: 0;
+}
+
+.acronym-list dt {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.acronym-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.acronym-list dd p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
